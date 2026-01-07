@@ -1,7 +1,22 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'i.alza.cz',
+        pathname: '/Foto/**',
+        port: '',
+        protocol: 'https',
+      },
+      {
+        hostname: 'image.alza.cz',
+        pathname: '/**',
+        port: '',
+        protocol: 'https',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
